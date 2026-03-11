@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Mar 11 10:13:06 2026
-
-@author: aj
-"""
-
 import streamlit as st
 import xml.etree.ElementTree as ET
 from io import BytesIO
@@ -84,6 +77,14 @@ def process_xml(xml_content):
                     if elem is not None:
                         new_elem = ET.SubElement(new_instance, tag)
                         new_elem.text = elem.text
+                
+                # Copy all label elements
+                for label in instance.findall('label'):
+                    new_label = ET.SubElement(new_instance, 'label')
+                    text_elem = label.find('text')
+                    if text_elem is not None:
+                        new_text = ET.SubElement(new_label, 'text')
+                        new_text.text = text_elem.text
         
         # Process ROWS
         rows = root.find('ROWS')
