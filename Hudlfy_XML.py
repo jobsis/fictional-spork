@@ -17,7 +17,19 @@ TEAM_MAPPING = {
     'Oranje Rood H1': 'OR',
     'Laren H1': 'LAR',
     'Schaerweijde H1': 'SW',
-    'Bloemendaal H1': 'BLO'
+    'Bloemendaal H1': 'BLO',
+    'Nijmegen H1':'NIJ',
+    'Ring Pass H1':'RP',
+    'Tilburg H1':'TIL',
+    'Victoria H1':'VIC',
+    'Almere H1':'ALM',
+    'SCHC H1':'SCHC',
+    'Push H1':'PUSH',
+    'Voordaan H1':'VRDN',
+    'Berkel-Rodenrijs H1':'HBR',
+    'Ede H1':'EDE',
+    'Cartouche H1':'CAR',
+    'Leiden H1':'LOHC'
 }
 
 def convert_filename(original_filename):
